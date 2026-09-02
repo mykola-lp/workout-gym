@@ -77,10 +77,24 @@ body::-webkit-scrollbar-thumb {
 .burger__line {
   border: 1px solid var(--light-grey);
   border-radius: 2px;
+
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .burger__line:not(:last-child) {
   margin-bottom: 7px;
+}
+
+.navigation[open] .burger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.navigation[open] .burger__line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.navigation[open] .burger__line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 #nav {
