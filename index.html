@@ -20,7 +20,47 @@
   </head>
 
   <body>
-    <h1>Hello</h1>
+    <div class="general-bg">
+      <header class="navigation-wrapper container">
+        <picture class="company">
+          <source srcset="./img/company.svg" media="(min-width: 768px)" />
+          <img src="./img/company--mob.svg" alt="company" />
+        </picture>
+
+        <details class="navigation">
+          <summary class="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+          </summary>
+
+          <div id="nav">
+            <menu class="navigation-list">
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">Exercises</a>
+              </li>
+
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">Community</a>
+              </li>
+
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">Pricing</a>
+              </li>
+
+              <li class="navigation-list__item">
+                <a href="#" class="navigation-list__link">About Us</a>
+              </li>
+            </menu>
+
+            <a href="#" class="navigation-btn navigation-btn--accent">Login</a>
+            <a href="#" class="navigation-btn">Sign In</a>
+          </div>
+        </details>
+      </header>
+
+
+    </div>
 
     <script src="./script.js"></script>
   </body>
