@@ -43,6 +43,13 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--black);
 }
 
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 /* ========== NAVIGATION ========== */
 
 .navigation-wrapper {
