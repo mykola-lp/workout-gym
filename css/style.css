@@ -213,3 +213,60 @@ body::-webkit-scrollbar-thumb {
     line-height: 21px;
   }
 }
+
+/* ==========  HERO  ========== */
+
+.hero-wrapper {
+  padding-top: 63px;
+  padding-bottom: 50px;
+}
+
+.hero__banner {
+  display: inline-block;
+  width: 100%;
+  height: 283px;
+  overflow: hidden;
+}
+
+.hero__banner img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.215em;
+}
+
+.hero__title--smaller {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.hero__text {
+  margin: 9px 0 54px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  opacity: 0.36;
+}
+
+.hero__info {
+  text-align: center;
+}
+
+.hero-card {
+  display: none;
+  pointer-events: none;
+  appearance: none;
+  opacity: 0;
+  z-index: -1;
+}
