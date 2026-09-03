@@ -69,6 +69,17 @@ body::-webkit-scrollbar-thumb {
     font-size: 20px;
     line-height: 30px;
   }
+
+  .primary-btn--small {
+    padding: 10px 13px;
+
+    font-size: 13px;
+    line-height: 20px;
+
+    text-transform: uppercase;
+
+    border-radius: 5px;
+  }
 }
 
 /* ========== NAVIGATION ========== */
@@ -409,5 +420,228 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
     pointer-events: initial;
     appearance: initial;
+  }
+}
+
+/* ========== TRAINING ========== */
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.section-head__title {
+  position: relative;
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+
+  text-transform: uppercase;
+}
+
+.section-head__title::after{
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  margin-top: 4px;
+
+  width: 100%;
+  height: 5px;
+
+  background-color: var(--dark-purple);
+}
+
+.section-head__link {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+
+  text-decoration: none;
+
+  color: var(--pink);
+}
+
+.training-list {
+  --cards-visible: 3;
+  --card-h: 209px;
+  --gap: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+
+  --cards-height: calc(
+    var(--cards-visible) * var(--card-h)
+  );
+
+  --gaps-height: calc(
+    (var(--cards-visible) - 1) * var(--gap)
+  );
+
+  max-height: calc(
+    var(--cards-height) + var(--gaps-height)
+  );
+
+  overflow-y: auto;
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.training-card {
+  position: relative;
+
+  flex-shrink: 0;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* More than 6 cards — only through "See more here" */
+.training-card:nth-child(n + 7) {
+  display: none;
+}
+
+.training-card__img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.training-card__title {
+  position: absolute;
+  left: 5px;
+  bottom: 7px;
+
+  width: 100%;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+
+  text-transform: uppercase;
+}
+
+.training-card__text,
+.primary-btn--small {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .section-head {
+    flex-direction: row;
+  }
+
+  .section-head__title::after{
+    width: 60px;
+  }
+
+  .training-list {
+    --cards-visible: 4; /* 2 rows × 2 cards */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    --rows: calc(var(--cards-visible) / 2);
+
+    --cards-height: calc(
+      var(--rows) * var(--card-h)
+    );
+
+    --gaps-height: calc(
+      (var(--rows) - 1) * 24px
+    );
+
+    max-height: calc(
+      var(--cards-height) + var(--gaps-height)
+    );
+  }
+
+  /* Odd last card — full width and centered */
+  .training-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .training-wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .section-head__title {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  .training-card__title {
+    position: static;
+    left: unset;
+    bottom: unset;
+
+    margin-top: 12px;
+  }
+
+  .training-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+
+    max-height: none;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .training-card {
+    flex: 0 1 calc((100% - 2 * 30px) / 3); /* 3 cards per row */
+    scroll-snap-align: unset;
+  }
+
+  .training-card:nth-child(3n+1):nth-last-child(2) {
+    margin-left: auto;
+  }
+
+  .training-card:nth-child(3n+2):last-child {
+    margin-right: auto;
+  }
+
+  .training-card:last-child:nth-child(odd) {
+    grid-column: unset;
+    justify-self: unset;
+    max-width: none;
+  }
+
+  .training-card__text,
+  .primary-btn--small {
+    display: inline-block;
+  }
+
+  .training-card__text {
+    margin: 5px 0 20px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    opacity: 0.36;
   }
 }
