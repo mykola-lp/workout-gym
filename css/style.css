@@ -43,10 +43,31 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--black);
 }
 
+.primary-btn {
+  display: inline-block;
+
+  padding: 11px;
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+
+  background-color: var(--pink);
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 1024px) {
   .container {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .primary-btn {
+    padding: 20px 30px;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
