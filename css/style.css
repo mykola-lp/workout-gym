@@ -781,7 +781,6 @@ body::-webkit-scrollbar-thumb {
   grid-template-areas: "company company"
                        "socials socials"
                        "info contact";
-  align-items: start;
 }
 
 .footer-main::before,
@@ -949,6 +948,14 @@ body::-webkit-scrollbar-thumb {
 @media (hover: hover) and (pointer: fine) {
   .footer-bottom__terms:hover {
     color: var(--pink);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .footer-main {
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    column-gap: 60px;
   }
 }
 
