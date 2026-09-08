@@ -645,3 +645,60 @@ body::-webkit-scrollbar-thumb {
     opacity: 0.36;
   }
 }
+
+/* ========== POTENTIAL ========== */
+
+.potential-wrapper {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.potential {
+  background-color: var(--semi-black);
+  padding: 10px 12px 15px;
+  text-align: center;
+}
+
+.potential__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.215em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.potential__text {
+  margin: 10px 0 84px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.potential__actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.potential__btn {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 135px;
+  padding: 14px 12px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: var(--pink);
+  border-radius: 5px;
+}
+
+.potential__btn--accent {
+  background-color: var(--black);
+}
