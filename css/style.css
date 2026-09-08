@@ -778,10 +778,9 @@ body::-webkit-scrollbar-thumb {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "company company"
-    "socials socials"
-    "info contact";
+  grid-template-areas: "company company"
+                       "socials socials"
+                       "info contact";
   align-items: start;
 }
 
@@ -950,5 +949,42 @@ body::-webkit-scrollbar-thumb {
 @media (hover: hover) and (pointer: fine) {
   .footer-bottom__terms:hover {
     color: var(--pink);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-main {
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: "company info contact socials";
+    justify-content: space-between;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .footer__company {
+    margin-top: 0;
+    margin-left: 23px;
+  }
+
+  .footer-socials {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .footer-column {
+    padding: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 20px;
+  }
+
+  .footer-bottom__copyright {
+    text-align: left;
   }
 }
