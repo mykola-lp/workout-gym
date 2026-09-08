@@ -726,3 +726,35 @@ body::-webkit-scrollbar-thumb {
     padding: 16px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .potential-wrapper {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .potential {
+    padding: 65px 135px;
+  }
+
+  .potential__title {
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .potential__text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .potential__actions {
+    gap: 30px;
+  }
+
+  .potential__btn {
+    padding: 20px 40px;
+
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
