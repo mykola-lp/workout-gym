@@ -655,7 +655,7 @@ body::-webkit-scrollbar-thumb {
 
 .potential {
   background-color: var(--semi-black);
-  padding: 10px 12px 15px;
+  padding: 15px 12px;
   text-align: center;
 }
 
@@ -701,4 +701,28 @@ body::-webkit-scrollbar-thumb {
 
 .potential__btn--accent {
   background-color: var(--black);
+}
+
+@media screen and (min-width: 768px) {
+  .potential-wrapper {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+
+  .potential__title {
+    font-size: 30px;
+    line-height: 48px;
+  }
+
+  .potential {
+    padding: 32px 65px;
+  }
+
+  .potential__actions {
+    gap: 25px;
+  }
+
+  .potential__btn {
+    padding: 16px;
+  }
 }
