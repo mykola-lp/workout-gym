@@ -647,6 +647,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ========== POTENTIAL ========== */
+/* ========== POTENTIAL ========== */
 
 .potential-wrapper {
   padding-top: 50px;
@@ -686,6 +687,7 @@ body::-webkit-scrollbar-thumb {
 .potential__btn {
   display: inline-block;
   box-sizing: border-box;
+  flex-shrink: 0;
   min-width: 135px;
   padding: 14px 12px;
 
@@ -709,13 +711,13 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 30px;
   }
 
+  .potential {
+    padding: 32px 65px;
+  }
+
   .potential__title {
     font-size: 30px;
     line-height: 48px;
-  }
-
-  .potential {
-    padding: 32px 65px;
   }
 
   .potential__actions {
@@ -743,6 +745,10 @@ body::-webkit-scrollbar-thumb {
   }
 
   .potential__text {
+    max-width: 665px;
+    margin-left: auto;
+    margin-right: auto;
+
     font-size: 13px;
     line-height: 20px;
   }
