@@ -415,12 +415,20 @@ details.navigation[open] #nav {
   height: 40px;
 
   border-radius: 50%;
-
   background-color: var(--pink);
+
+  overflow: hidden;
 }
 
 .hero-card__arrow svg {
-  transform: translateX(-1px);
+  transform: translate(-0.5px, 0.5px);
+  transition: transform 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-card__btn:hover .hero-card__arrow svg {
+    transform: translate(1px, -1px);
+  }
 }
 
 @media screen and (min-width: 768px) {
