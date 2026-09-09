@@ -153,6 +153,23 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--dark-purple);
 }
 
+/* --- dropdown menu appearance --- */
+
+details.navigation[open] #nav {
+  animation: nav-fade-in 0.25s ease;
+}
+
+@keyframes nav-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .navigation-list {
   display: flex;
   flex-direction: column;
@@ -223,6 +240,15 @@ body::-webkit-scrollbar-thumb {
 .navigation-btn--accent {
   background-color: var(--pink);
   border-color: var(--pink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation-list__link::after,
+  details.navigation[open] #nav,
+  .navigation-btn {
+    animation: none;
+    transition: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
