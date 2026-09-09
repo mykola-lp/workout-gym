@@ -774,6 +774,23 @@ details.navigation[open] #nav {
 
   background-color: var(--pink);
   border-radius: 5px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .potential__btn:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 10px rgba(242, 75, 136, 0.4);
+  }
+
+  .potential__btn--accent:hover {
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.15);
+  }
+}
+
+.potential__btn:active {
+  transform: scale(0.98);
 }
 
 .potential__btn--accent {
